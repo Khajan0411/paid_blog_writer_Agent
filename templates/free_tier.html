@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block title %}Free Tier{% endblock %}
+{% block content %}
+<h3>Generate Blog</h3>
+
+<form method="post">
+    <input type="text" name="topic" placeholder="Search topic..." required>
+    <button type="submit">Generate</button>
+</form>
+
+<h4>🔥 Trending Topics:</h4>
+<ul>
+    {% for t in trending %}
+    <li><form method="post" style="display:inline;"><input type="hidden" name="topic" value="{{ t }}"><button type="submit">{{ t }}</button></form></li>
+    {% endfor %}
+</ul>
+
+{% if blog %}
+<h4>📝 Blog Preview:</h4>
+<div class="blog-canvas">
+    <pre>{{ blog }}</pre>
+</div>
+{% endif %}
+
+{% endblock %}

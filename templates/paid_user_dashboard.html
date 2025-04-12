@@ -1,0 +1,8 @@
+<h2>Welcome, {{ user.name }}!</h2>
+<p style="color: green;">Paid user | Subscription valid till: {{ user.subscription_expiry.strftime('%Y-%m-%d') }}</p>
+
+<!-- Blog Search UI -->
+<form method="POST">
+  <input type="text" name="topic" placeholder="Search a blog topic" />
+  <button type="submit">Generate Blog</button>
+</form>

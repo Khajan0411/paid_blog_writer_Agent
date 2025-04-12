@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<h2>Welcome, {{ user.name }} 👋</h2>
+
+<p>Select your plan:</p>
+<ul>
+    <li><a href="/free">Free Tier</a> - Generate blogs only</li>
+    <li><a href="/paid">Paid Tier</a> - Generate & Auto-post</li>
+</ul>
+
+{% endblock %}

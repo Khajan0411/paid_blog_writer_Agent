@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+*.egg
+*.log
+
+# Environment
+.env
+
+# Byte-compiled / optimized / DLL files
+*.so
+
+# Virtual environments
+env/
+venv/
+ENV/
+.venv/
+
+# Database (SQLite)
+*.db
+*.sqlite3
+
+# VS Code
+.vscode/
+
+# Pytest cache
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# MacOS
+.DS_Store
+
+# OS-generated files
+Thumbs.db
+ehthumbs.db
+desktop.ini
+.env/
+myvenv/

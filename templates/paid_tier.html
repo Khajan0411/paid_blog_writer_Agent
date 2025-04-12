@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block title %}Paid Tier{% endblock %}
+{% block content %}
+<h2>Paid Tier Access</h2>
+
+{% if not user.get('is_paid') %}
+    <p>Subscribe for ₹599/month to enable blog auto-posting.</p>
+    <form action="/pay" method="POST">
+        <button type="submit">Pay with Razorpay</button>
+    </form>
+{% else %}
+    <h3>Submit Your Blog Site Credentials</h3>
+    <form method="POST" action="/submit-blog-credentials">
+        <label>Website URL:</label><br>
+        <input type="text" name="url" required><br>
+        <label>Blog ID:</label><br>
+        <input type="text" name="blog_id" required><br>
+        <label>Password:</label><br>
+        <input type="password" name="blog_password" required><br><br>
+        <button type="submit">Submit</button>
+    </form>
+{% endif %}
+{% endblock %}
